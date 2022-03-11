@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: burst
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: app
+          image: europe-west1-docker.pkg.dev/fluent-buckeye-343615/workshop/producer:latest
+          envFrom:
+            - configMapRef:
+                name: kafka-envs
+          env:
+            - name: BURST_THEN_QUIT
+              value: "true"
