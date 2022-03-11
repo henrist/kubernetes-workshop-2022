@@ -1,4 +1,4 @@
-# kafka-envs
+# kafka-topic
 
 Replace CHANGEME in `manifest.yaml`.
 
