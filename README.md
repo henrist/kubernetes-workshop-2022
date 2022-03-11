@@ -58,7 +58,7 @@ kubectl create namespace NAME
 To make `kubectl` command using your namespace by default (instead of the namespace called `default`) you can set it as a default:
 
 ```bash
-kubectl config set-contexts --current --namespace=NAME
+kubectl config set-context --current --namespace=NAME
 ```
 
 You could also add `--namespace NAME` (or `-n NAME` for short) to every `kubectl` command.
